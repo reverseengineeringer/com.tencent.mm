@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cwu">Google Play services error</string>
+    <string name="cwv">An application requires installation of Google Play services.</string>
+    <string name="cww">An application requires an update for Google Play Services.</string>
+    <string name="cwx">An application requires Google Play services to be enabled.</string>
+    <string name="cwy">Requested by %1$s</string>
+    <string name="cwz">Get Google Play services</string>
+    <string name="cx0">"This app won't run without Google Play services, which are missing from your phone."</string>
+    <string name="cx1">"This app won't run without Google Play services, which are missing from your tablet."</string>
+    <string name="cx2">Get Google Play services</string>
+    <string name="cx3">Enable Google Play services</string>
+    <string name="cx4">"This app won't work unless you enable Google Play services."</string>
+    <string name="cx5">Enable Google Play services</string>
+    <string name="cx6">Update Google Play services</string>
+    <string name="cx7">"This app won't run unless you update Google Play services."</string>
+    <string name="cx8">Network Error</string>
+    <string name="cx9">A data connection is required to connect to Google Play services.</string>
+    <string name="cx_">Invalid Account</string>
+    <string name="cxa">The specified account does not exist on this device. Please choose a different account.</string>
+    <string name="cxb">Unknown issue with Google Play services.</string>
+    <string name="cxc">Google Play services</string>
+    <string name="cxd">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
+    <string name="cxe">The date on the device appears to be incorrect. Please check the date on the device.</string>
+    <string name="cxf">Update</string>
+    <string name="cxg">Sign in</string>
+    <string name="cxh">Sign in with Google</string>
+</resources>

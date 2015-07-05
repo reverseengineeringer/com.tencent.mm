@@ -1,0 +1,109 @@
+package com.tencent.mm;
+
+public final class a$a
+{
+  public static int abc_fade_in = 2130968576;
+  public static int abc_fade_out = 2130968577;
+  public static int abc_slide_in_bottom = 2130968578;
+  public static int abc_slide_in_top = 2130968579;
+  public static int abc_slide_out_bottom = 2130968580;
+  public static int abc_slide_out_top = 2130968581;
+  public static int alpha_in = 2130968582;
+  public static int alpha_out = 2130968583;
+  public static int anim_not_change = 2130968584;
+  public static int anim_not_change_for_slide = 2130968585;
+  public static int arrow_appare = 2130968586;
+  public static int avatar_animation = 2130968587;
+  public static int avatar_animation_bottom_left_in = 2130968588;
+  public static int avatar_animation_bottom_left_out = 2130968589;
+  public static int avatar_animation_out = 2130968590;
+  public static int avatar_animation_right_in = 2130968591;
+  public static int avatar_animation_right_out = 2130968592;
+  public static int bottle_light_house = 2130968593;
+  public static int bottle_rotate = 2130968594;
+  public static int bottle_voice_playing = 2130968595;
+  public static int breathe_in = 2130968596;
+  public static int breathe_out = 2130968597;
+  public static int dropdown_down = 2130968598;
+  public static int dropdown_up = 2130968599;
+  public static int dropup_down = 2130968600;
+  public static int dropup_up = 2130968601;
+  public static int enter_view_in = 2130968602;
+  public static int faded_in = 2130968603;
+  public static int faded_out = 2130968604;
+  public static int fadedin_to_left_up = 2130968605;
+  public static int fadedin_to_right_up = 2130968606;
+  public static int fadedout_to_left_down = 2130968607;
+  public static int fadedout_to_right_down = 2130968608;
+  public static int fast_faded_in = 2130968609;
+  public static int fast_faded_out = 2130968610;
+  public static int finger_print_layout_anim = 2130968611;
+  public static int font_fade_in = 2130968612;
+  public static int font_fade_out = 2130968613;
+  public static int game_dropdown = 2130968614;
+  public static int game_progress_anim = 2130968615;
+  public static int header_view_anim = 2130968616;
+  public static int like_view_anim = 2130968617;
+  public static int list_anim = 2130968618;
+  public static int list_anim_layout = 2130968619;
+  public static int mmaccelerate_interpolator = 2130968620;
+  public static int mmdecelerate_interpolator = 2130968621;
+  public static int panel_fade_in = 2130968622;
+  public static int panel_fade_out = 2130968623;
+  public static int pop_in = 2130968624;
+  public static int pop_out = 2130968625;
+  public static int push_down_in = 2130968626;
+  public static int push_down_out = 2130968627;
+  public static int push_empty_out = 2130968628;
+  public static int push_up_in = 2130968629;
+  public static int push_up_out = 2130968630;
+  public static int radar_button_fade_in = 2130968631;
+  public static int radar_state_sacle_in = 2130968632;
+  public static int radar_state_sacle_out = 2130968633;
+  public static int radar_state_slide_in = 2130968634;
+  public static int radar_state_slide_out = 2130968635;
+  public static int radar_tips_fade_in = 2130968636;
+  public static int radar_tips_fade_out = 2130968637;
+  public static int radar_user_turn_out = 2130968638;
+  public static int radar_wave_rotate = 2130968639;
+  public static int recording_anim = 2130968640;
+  public static int refresh_animation = 2130968641;
+  public static int right_left = 2130968642;
+  public static int scroll_view_in = 2130968643;
+  public static int shake_line_fade_in_out = 2130968644;
+  public static int shake_object_animate = 2130968645;
+  public static int shake_object_interpolator = 2130968646;
+  public static int shake_report_dlg_translate_in = 2130968647;
+  public static int shake_report_dlg_translate_out = 2130968648;
+  public static int shake_right_left = 2130968649;
+  public static int show_out = 2130968650;
+  public static int sight_breathing_tips_anim = 2130968651;
+  public static int sight_draft_in = 2130968652;
+  public static int sight_draft_out = 2130968653;
+  public static int sight_loop = 2130968654;
+  public static int slide_bottom_in = 2130968655;
+  public static int slide_left_in = 2130968656;
+  public static int slide_left_out = 2130968657;
+  public static int slide_pop_in = 2130968658;
+  public static int slide_pop_out = 2130968659;
+  public static int slide_right_in = 2130968660;
+  public static int slide_right_out = 2130968661;
+  public static int slide_top_out = 2130968662;
+  public static int sns_faded_in = 2130968663;
+  public static int sns_faded_out = 2130968664;
+  public static int tip_scale = 2130968665;
+  public static int toast_fade_in = 2130968666;
+  public static int toast_fade_out = 2130968667;
+  public static int translate_down = 2130968668;
+  public static int translate_map = 2130968669;
+  public static int translate_up = 2130968670;
+  public static int update_package_download = 2130968671;
+  public static int voice_recording_animation = 2130968672;
+  public static int wallet_progress_anim = 2130968673;
+}
+
+/* Location:
+ * Qualified Name:     com.tencent.mm.a.a
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

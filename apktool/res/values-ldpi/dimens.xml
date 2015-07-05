@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="i_">45.0dip</dimen>
+    <dimen name="ia">45.0dip</dimen>
+    <dimen name="ib">24.0dip</dimen>
+    <dimen name="ic">6.0dip</dimen>
+    <dimen name="id">5.0dip</dimen>
+    <dimen name="ie">180.0dip</dimen>
+    <dimen name="iv">32.0dip</dimen>
+    <dimen name="iw">6.0dip</dimen>
+    <dimen name="ix">40.0dip</dimen>
+    <dimen name="iy">30.0dip</dimen>
+    <dimen name="iz">36.0dip</dimen>
+</resources>

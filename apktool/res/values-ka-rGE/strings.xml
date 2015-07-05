@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cwu">Google Play Services-ის შეცდომა</string>
+    <string name="cwv">აპლიკაცია საჭიროება Google Play Services-ის ინსტალაციას.</string>
+    <string name="cww">აპლიკაცია საჭიროებს Google Play Services-ის განახლებას.</string>
+    <string name="cwx">აპლიკაცია საჭიროებს გააქტიურებულ Google Play Services.</string>
+    <string name="cwy">მომთხოვნი: %1$s</string>
+    <string name="cwz">Google Play სერვისების მიღება</string>
+    <string name="cx0">ეს აპი ვერ გაეშვება Google Play სერვისების გარეშე, რაც თქვენს ტელეფონზე ვერ იძებნება.</string>
+    <string name="cx1">ეს აპი ვერ გაეშვება Google Play სერვისების გარეშე, რაც თქვენს ტელეფონზე ვერ იძებნება.</string>
+    <string name="cx2">Google Play სერვისების მიღება</string>
+    <string name="cx3">Google Play სერვისების გააქტიურება</string>
+    <string name="cx4">ეს აპი არ იმუშავებს, თუ არ გაააქტიურებთ Google Play სერვისებს.</string>
+    <string name="cx5">Google Play სერვისების გააქტიურება</string>
+    <string name="cx6">Google Play სერვისების განახლება</string>
+    <string name="cx7">ეს აპი ვერ გაეშვება, თუ Google Play სერვისებს არ განაახლებთ.</string>
+    <string name="cx8">ქსელის შეცდომა</string>
+    <string name="cx9">Google Play Services-თან დასაკავშირებლად მონაცემთა გადაცემა აუცილებელია.</string>
+    <string name="cx_">ანგარიში არასწორია</string>
+    <string name="cxa">მითითებული ანგარიში ამ მოწყობილობაზე არ არსებობს. გთხოვთ, აირჩიოთ სხვა ანგარიში.</string>
+    <string name="cxb">Google Play სერვისებთან დაკავშირებით უცნობი შეფერხება წარმოიშვა.</string>
+    <string name="cxc">Google Play სერვისები</string>
+    <string name="cxd">Google Play სერვისები, რაც თქვენს ზოგიერთ აპს ჭირდება, თქვენს მოწყობილობაზე მხარდაჭერილი არ არის. გთხოვთ, დაუკავშირდეთ მწარმოებელს დახმარებისათვის.</string>
+    <string name="cxe">როგორც ჩანს, მოწყობილობის თარიღი არასწორია. გთხოვთ, შეამოწმოთ მოწყობილობის თარიღი.</string>
+    <string name="cxf">განახლება</string>
+    <string name="cxg">შესვლა</string>
+    <string name="cxh">Google-ით შესვლა</string>
+</resources>

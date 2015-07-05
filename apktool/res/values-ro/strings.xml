@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cwu">Eroare a serviciilor Google Play</string>
+    <string name="cwv">O aplicație necesită instalarea serviciilor Google Play.</string>
+    <string name="cww">O aplicație necesită o actualizare pentru serviciile Google Play.</string>
+    <string name="cwx">O aplicație necesită activarea serviciilor Google Play.</string>
+    <string name="cwy">Solicitată de %1$s</string>
+    <string name="cwz">Descărcaţi Servicii Google Play</string>
+    <string name="cx0">Această aplicaţie nu poate rula fără Servicii Google Play, care lipsesc de pe telefon.</string>
+    <string name="cx1">Această aplicaţie nu poate rula fără Servicii Google Play, care lipsesc de pe tabletă.</string>
+    <string name="cx2">Obţineţi Servicii Google Play</string>
+    <string name="cx3">Activaţi Servicii Google Play</string>
+    <string name="cx4">Această aplicaţie nu va funcţiona decât dacă activaţi Servicii Google Play.</string>
+    <string name="cx5">Activaţi Servicii Google Play</string>
+    <string name="cx6">Actualizaţi Servicii Google Play</string>
+    <string name="cx7">Această aplicaţie nu poate rula decât dacă actualizaţi Servicii Google Play.</string>
+    <string name="cx8">Eroare de reţea</string>
+    <string name="cx9">Este necesară o conexiune de date pentru a vă conecta la serviciile Google Play.</string>
+    <string name="cx_">Cont nevalid</string>
+    <string name="cxa">Contul menționat nu există pe acest dispozitiv. Alegeți alt cont.</string>
+    <string name="cxb">Problemă necunoscută privind Servicii Google Play.</string>
+    <string name="cxc">Servicii Google Play</string>
+    <string name="cxd">Gadgetul nu acceptă serviciile Google Play, pe care se bazează unele dintre aplicații. Pentru asistență, contactați producătorul gadgetului.</string>
+    <string name="cxe">Data de pe dispozitiv pare să fie incorectă. Verificați data de pe dispozitiv.</string>
+    <string name="cxf">Actualizaţi</string>
+    <string name="cxg">Conectați</string>
+    <string name="cxh">Conectați-vă cu Google</string>
+</resources>

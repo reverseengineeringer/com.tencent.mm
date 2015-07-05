@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="a">
+        <item quantity="other">%d条未读</item>
+        <item quantity="one">%d条未读</item>
+    </plurals>
+    <plurals name="b">
+        <item quantity="other">%d条未读</item>
+        <item quantity="one">%d条未读</item>
+    </plurals>
+    <plurals name="c">
+        <item quantity="other">标签%1$d之%2$d</item>
+        <item quantity="zero">标签%d之1</item>
+        <item quantity="one">标签%d之2</item>
+        <item quantity="two">标签%d之3</item>
+    </plurals>
+    <plurals name="d">
+        <item quantity="other">语音%d秒</item>
+        <item quantity="one">语音%d秒</item>
+    </plurals>
+    <plurals name="e">
+        <item quantity="other">%1$d个联系人发来%2$d条消息</item>
+        <item quantity="one">%1$d个联系人发来%2$d条消息</item>
+    </plurals>
+    <plurals name="f">
+        <item quantity="other">[%d条]</item>
+        <item quantity="one">[%d条]</item>
+    </plurals>
+    <plurals name="g">
+        <item quantity="other">有%d个瓶子收到新回应</item>
+        <item quantity="one">有%d个瓶子收到新回应</item>
+    </plurals>
+    <plurals name="h">
+        <item quantity="other">接收短信大约需要%d秒钟</item>
+        <item quantity="one">接收短信大约需要%d秒钟</item>
+    </plurals>
+    <plurals name="i">
+        <item quantity="other">还可以说 %d 秒</item>
+        <item quantity="one">还可以说 %d 秒</item>
+    </plurals>
+    <plurals name="j">
+        <item quantity="other">%d位联系人</item>
+        <item quantity="one">%d位联系人</item>
+    </plurals>
+    <plurals name="k">
+        <item quantity="other">%d个群聊</item>
+        <item quantity="one">%d个群聊</item>
+    </plurals>
+    <plurals name="l">
+        <item quantity="other">找到%d个在微信的朋友</item>
+        <item quantity="one">找到%d个在微信的朋友</item>
+    </plurals>
+    <plurals name="m">
+        <item quantity="other">找到%d个联系人</item>
+        <item quantity="one">找到%d个联系人</item>
+    </plurals>
+    <plurals name="n">
+        <item quantity="other">已添加%d个朋友</item>
+        <item quantity="one">已添加%d个朋友</item>
+    </plurals>
+    <plurals name="o">
+        <item quantity="other">已发送%d个邀请</item>
+        <item quantity="one">已发送%d个邀请</item>
+    </plurals>
+    <plurals name="p">
+        <item quantity="other">邀请你%d个朋友加入微信</item>
+        <item quantity="one">邀请你%d个朋友加入微信</item>
+    </plurals>
+    <plurals name="q">
+        <item quantity="other">%s位收件人：</item>
+        <item quantity="one">%s位收件人：</item>
+    </plurals>
+    <plurals name="r">
+        <item quantity="other">你将发消息给 %s 位朋友</item>
+        <item quantity="one">你将发消息给 %s 位朋友</item>
+    </plurals>
+    <plurals name="s">
+        <item quantity="other">共%1$d个附件(%2$s)</item>
+        <item quantity="one">共%1$d个附件(%2$s)</item>
+    </plurals>
+    <plurals name="t">
+        <item quantity="other">%s条新消息</item>
+        <item quantity="one">%s条新消息</item>
+    </plurals>
+    <plurals name="u">
+        <item quantity="other">%d人</item>
+        <item quantity="one">%d人</item>
+    </plurals>
+    <plurals name="v">
+        <item quantity="other">%s人</item>
+        <item quantity="one">%s人</item>
+    </plurals>
+    <plurals name="w">
+        <item quantity="other">你收到%d个打招呼消息</item>
+        <item quantity="one">你收到%d个打招呼消息</item>
+    </plurals>
+    <plurals name="x">
+        <item quantity="other">你最多只能选择%s张照片</item>
+        <item quantity="one">你最多只能选择%s张照片</item>
+    </plurals>
+    <plurals name="y">
+        <item quantity="other">你最多只能选择%s个视频</item>
+        <item quantity="one">你最多只能选择%s个视频</item>
+    </plurals>
+    <plurals name="z">
+        <item quantity="other">你最多只能选择%s个图片或者视频</item>
+        <item quantity="one">你最多只能选择%s个图片或者视频</item>
+    </plurals>
+    <plurals name="a0">
+        <item quantity="other">%d 人在共享位置</item>
+        <item quantity="one">%d 人在共享位置</item>
+    </plurals>
+    <plurals name="a1">
+        <item quantity="other">%s人</item>
+        <item quantity="one">%s人</item>
+    </plurals>
+    <plurals name="a2">
+        <item quantity="other">%d分钟前</item>
+        <item quantity="one">%d分钟前</item>
+    </plurals>
+    <plurals name="a3">
+        <item quantity="other">%d小时前</item>
+        <item quantity="one">%d小时前</item>
+    </plurals>
+    <plurals name="a4">
+        <item quantity="other">%d天前</item>
+        <item quantity="one">%d天前</item>
+    </plurals>
+    <plurals name="a5">
+        <item quantity="other">新增%d人</item>
+        <item quantity="one">新增%d人</item>
+    </plurals>
+    <plurals name="a6">
+        <item quantity="other">修改%s人</item>
+        <item quantity="one">修改%s人</item>
+    </plurals>
+    <plurals name="a7">
+        <item quantity="other">新增%d人</item>
+        <item quantity="one">新增%d人</item>
+    </plurals>
+    <plurals name="a8">
+        <item quantity="other">共%d张</item>
+        <item quantity="one">共%d张</item>
+    </plurals>
+    <plurals name="a9">
+        <item quantity="other">%d条新消息</item>
+        <item quantity="one">%d条新消息</item>
+    </plurals>
+    <plurals name="a_">
+        <item quantity="other">共%d张</item>
+        <item quantity="one">共%d张</item>
+    </plurals>
+    <plurals name="aa">
+        <item quantity="other">还可以拍摄%s秒</item>
+        <item quantity="one">还可以拍摄%s秒</item>
+    </plurals>
+</resources>

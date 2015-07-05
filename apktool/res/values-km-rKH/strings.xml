@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cwu">កំហុស​​សេវាកម្ម​ Google កម្សាន្ត</string>
+    <string name="cwv">កម្មវិធី​ទាមទារ​ឲ្យ​ដំឡើង​សេវាកម្ម​ Google កម្សាន្ត។</string>
+    <string name="cww">កម្មវិធី​ទាមទារ​​ធ្វើ​បច្ចុប្បន្នភាព​សេវាកម្ម ​Google កម្សាន្ត។</string>
+    <string name="cwx">កម្មវិធី​ទាមទារ​ឲ្យ​បើក​សេវាកម្ម​ Google កម្សាន្ត។</string>
+    <string name="cwy">បាន​ស្នើ​ដោយ %1$s</string>
+    <string name="cwz">ទទួល​សេវាកម្ម​កម្សាន្ត Google</string>
+    <string name="cx0">កម្មវិធី​នេះ​នឹង​មិន​ដំណើរការ​​ទេ​បើ​គ្មាន​​សេវាកម្ម​កម្សាន្ត​ Google ដែល​ទូរស័ព្ទ​របស់​​អ្នក​មិន​មាន។</string>
+    <string name="cx1">​​កម្មវិធី​នេះ​នឹង​មិន​ដំណើរការ​​ទេ​បើ​គ្មាន​​សេវាកម្ម​កម្សាន្ត​ Google ដែល​​កុំព្យូទ័រ​បន្ទះ​របស់​អ្នក​មិន​មាន។</string>
+    <string name="cx2">ទទួល​សេវាកម្ម​កម្សាន្ត Google</string>
+    <string name="cx3">បើក​សេវាកម្ម​កម្សាន្ត Google</string>
+    <string name="cx4">កម្ម​វិធី​នេះ​នឹង​មិន​ដំណើរការ​ទេ​ លុះត្រាតែ​អ្នក​បើក​សេវាកម្ម​​កម្សាន្ត​ Google ។</string>
+    <string name="cx5">បើក​សេវាកម្ម​កម្សាន្ត Google</string>
+    <string name="cx6">ធ្វើ​បច្ចុប្បន្នភាព​សេវាកម្ម​កម្សាន្ត Google</string>
+    <string name="cx7">កម្មវិធី​នេះ​នឹង​មិន​ដំណើរការ​ទេ​ លុះត្រាតែ​អ្នក​ធ្វើ​បច្ចុប្បន្នភាព​សេវាកម្ម​កម្សាន្ត Google ។</string>
+    <string name="cx8">កំហុស​​បណ្ដាញ</string>
+    <string name="cx9">បាន​ទាមទារ​ការ​តភ្ជាប់​ទិន្នន័យ ដើម្បី​ភ្ជាប់​សេវាកម្ម​ឃ្លាំង​កម្មវិធី។</string>
+    <string name="cx_">គណនី​មិន​ត្រឹមត្រូវ</string>
+    <string name="cxa">គណនី​ដែល​បាន​បញ្ជាក់​មិន​មាន​នៅ​លើ​ឧបករណ៍​នេះ​ទេ។ សូម​ជ្រើស​គណនី​ផ្សេង​។</string>
+    <string name="cxb">មិន​ស្គាល់​បញ្ហា​ជាមួយ​សេវាកម្ម​កម្សាន្ត Google ។</string>
+    <string name="cxc">សេវាកម្ម​កម្សាន្ត​ Google</string>
+    <string name="cxd">សេវាកម្ម​កម្សាន្ត Google អាស្រ័យ​លើ​កម្មវិធី​របស់​អ្នក មិន​ត្រូវ​បាន​គាំទ្រ​ដោយ​ឧបករណ៍​របស់​អ្នក។ សូម​ទាក់ទង​ក្រុមហ៊ុន​ផលិត​សម្រាប់​ជំនួយ។</string>
+    <string name="cxe">កាលបរិច្ឆេទ​លើ​ឧបករណ៍​បង្ហាញ​ថា​មិន​ត្រឹមត្រូវ។ សូម​ពិនិត្យ​កាលបរិច្ឆេទ​លើ​ឧបករណ៍។</string>
+    <string name="cxf">ធ្វើ​បច្ចុប្បន្នភាព</string>
+    <string name="cxg">ចូល</string>
+    <string name="cxh">ចូល​ដោយ​ប្រើ​ Google</string>
+</resources>

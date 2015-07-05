@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dq">60.0dip</dimen>
+    <dimen name="dr">50.0dip</dimen>
+    <dimen name="e3">60.0dip</dimen>
+    <dimen name="e4">42.0dip</dimen>
+    <dimen name="e5">12.0dip</dimen>
+    <dimen name="e6">4.0dip</dimen>
+    <dimen name="g6">99.0dip</dimen>
+    <dimen name="g7">47.0dip</dimen>
+    <dimen name="g8">14.0dip</dimen>
+    <dimen name="g9">43.0dip</dimen>
+    <dimen name="g_">119.0dip</dimen>
+    <dimen name="ga">22.0dip</dimen>
+    <dimen name="gb">29.0dip</dimen>
+    <dimen name="gc">102.0dip</dimen>
+    <dimen name="gd">166.0dip</dimen>
+    <dimen name="ge">198.0dip</dimen>
+    <dimen name="gf">41.0dip</dimen>
+    <dimen name="gg">85.0dip</dimen>
+    <dimen name="gh">11.0dip</dimen>
+    <dimen name="gi">18.0dip</dimen>
+    <dimen name="gj">14.0dip</dimen>
+    <dimen name="gk">18.0dip</dimen>
+    <dimen name="gl">18.0dip</dimen>
+</resources>

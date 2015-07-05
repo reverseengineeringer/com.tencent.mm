@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cwu">Google Play Tjenester-feil</string>
+    <string name="cwv">En app krever installasjon av Google Play Tjenester.</string>
+    <string name="cww">En app krever at Google Play Tjenester oppdateres.</string>
+    <string name="cwx">En app krever Google Play Tjenester for å aktiveres.</string>
+    <string name="cwy">Forespurt av %1$s</string>
+    <string name="cwz">Installer Google Play Tjenester</string>
+    <string name="cx0">Denne appen kan ikke kjøres uten Google Play Tjenester, som ikke er installert på telefonen din.</string>
+    <string name="cx1">Denne appen kan ikke kjøres uten Google Play Tjenester, som ikke er installert på nettbrettet ditt.</string>
+    <string name="cx2">Installer Google Play Tjenester</string>
+    <string name="cx3">Aktiver Google Play Tjenester</string>
+    <string name="cx4">Denne appen fungerer ikke med mindre du aktiverer Google Play Tjenester.</string>
+    <string name="cx5">Aktiver Google Play Tjenester</string>
+    <string name="cx6">Oppdater Google Play Tjenester</string>
+    <string name="cx7">Denne appen kan ikke kjøres før du oppdaterer Google Play Tjenester.</string>
+    <string name="cx8">Nettverksfeil</string>
+    <string name="cx9">Du må ha datatilkobling for å koble deg til Google Play-tjenester.</string>
+    <string name="cx_">Ugyldig konto</string>
+    <string name="cxa">Den angitte kontoen finnes ikke på enheten. Velg en annen konto.</string>
+    <string name="cxb">Det oppsto et ukjent problem med Google Play Tjenester.</string>
+    <string name="cxc">Google Play-tjenester</string>
+    <string name="cxd">Google Play Tjenester, som noen av appene er avhengige av, støttes ikke av enheten. Ta kontakt med produsenten for å få hjelp.</string>
+    <string name="cxe">Datoen på enheten ser ut til å være feil. Sjekk datoen på enheten.</string>
+    <string name="cxf">Oppdater</string>
+    <string name="cxg">Logg på</string>
+    <string name="cxh">Logg inn med Google</string>
+</resources>

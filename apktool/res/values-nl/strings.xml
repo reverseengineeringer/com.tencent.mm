@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cwu">Fout met Google Play-services</string>
+    <string name="cwv">Google Play-services moet zijn geïnstalleerd voor een app.</string>
+    <string name="cww">Google Play-services moet worden bijgewerkt voor een app.</string>
+    <string name="cwx">Google Play-services moet zijn ingeschakeld voor een app.</string>
+    <string name="cwy">Aangevraagd door %1$s</string>
+    <string name="cwz">Google Play-services ophalen</string>
+    <string name="cx0">Deze app kan niet worden uitgevoerd zonder Google Play-services die ontbreken op uw telefoon.</string>
+    <string name="cx1">Deze app kan niet worden uitgevoerd zonder Google Play-services die ontbreken op uw tablet.</string>
+    <string name="cx2">Google Play-services ophalen</string>
+    <string name="cx3">Google Play-services inschakelen</string>
+    <string name="cx4">Deze app werkt niet, tenzij u Google Play-services inschakelt.</string>
+    <string name="cx5">Google Play-services inschak.</string>
+    <string name="cx6">Google Play-services bijwerken</string>
+    <string name="cx7">Deze app kan niet worden uitgevoerd, tenzij u Google Play-services bijwerkt.</string>
+    <string name="cx8">Netwerkfout</string>
+    <string name="cx9">Er is een gegevensverbinding nodig om verbinding te kunnen maken met Google Play-services.</string>
+    <string name="cx_">Ongeldig account</string>
+    <string name="cxa">Het gespecificeerde account bestaat niet op dit apparaat. Kies een ander account.</string>
+    <string name="cxb">Onbekend probleem met Google Play-services.</string>
+    <string name="cxc">Google Play-services</string>
+    <string name="cxd">Google Play-services, dat vereist is voor een aantal van uw applicaties, wordt niet ondersteund door uw apparaat. Neem contact op met de fabrikant voor ondersteuning.</string>
+    <string name="cxe">De datum op het apparaat lijkt onjuist. Controleer de datum op het apparaat.</string>
+    <string name="cxf">Bijwerken</string>
+    <string name="cxg">Inloggen</string>
+    <string name="cxh">Inloggen met Google</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="ey">r/x/ey.xml</item>
+    <item type="layout" name="fq">r/x/fq.xml</item>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ck">40.0dip</dimen>
+    <dimen name="cl">4.0dip</dimen>
+    <dimen name="cm">16.0dip</dimen>
+    <dimen name="cn">12.0dip</dimen>
+    <dimen name="co">-2.0dip</dimen>
+    <dimen name="cp">4.0dip</dimen>
+</resources>

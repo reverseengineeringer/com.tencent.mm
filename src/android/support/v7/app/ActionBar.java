@@ -1,0 +1,97 @@
+package android.support.v7.app;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup.MarginLayoutParams;
+import com.tencent.mm.a.p;
+
+public abstract class ActionBar
+{
+  public abstract void bb();
+  
+  public abstract void bc();
+  
+  public abstract View getCustomView();
+  
+  public abstract int getDisplayOptions();
+  
+  public abstract int getHeight();
+  
+  public Context getThemedContext()
+  {
+    return null;
+  }
+  
+  public abstract void hide();
+  
+  public abstract boolean isShowing();
+  
+  public abstract void setBackgroundDrawable(Drawable paramDrawable);
+  
+  public abstract void setCustomView(int paramInt);
+  
+  public abstract void setCustomView(View paramView);
+  
+  public abstract void setDisplayHomeAsUpEnabled(boolean paramBoolean);
+  
+  public abstract void setDisplayOptions(int paramInt);
+  
+  public abstract void setDisplayShowTitleEnabled(boolean paramBoolean);
+  
+  public void setHomeButtonEnabled(boolean paramBoolean) {}
+  
+  public abstract void setIcon(int paramInt);
+  
+  public abstract void setLogo(Drawable paramDrawable);
+  
+  public abstract void show();
+  
+  public static class LayoutParams
+    extends ViewGroup.MarginLayoutParams
+  {
+    public int gravity = -1;
+    
+    public LayoutParams()
+    {
+      this(19);
+    }
+    
+    private LayoutParams(int paramInt)
+    {
+      super(-1);
+      gravity = 19;
+    }
+    
+    public LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
+    {
+      super(paramAttributeSet);
+      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.ActionBarLayout);
+      gravity = paramContext.getInt(0, -1);
+      paramContext.recycle();
+    }
+  }
+  
+  static abstract interface a {}
+  
+  public static abstract interface b {}
+  
+  public static abstract class c
+  {
+    public abstract CharSequence getContentDescription();
+    
+    public abstract View getCustomView();
+    
+    public abstract Drawable getIcon();
+    
+    public abstract CharSequence getText();
+  }
+}
+
+/* Location:
+ * Qualified Name:     android.support.v7.app.ActionBar
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

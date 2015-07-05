@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="raw" name="a">r/c/a.psvg</item>
+    <item type="raw" name="b">r/c/b.psvg</item>
+    <item type="raw" name="c">r/c/c.psvg</item>
+    <item type="raw" name="d">r/c/d.psvg</item>
+    <item type="raw" name="e">r/c/e.psvg</item>
+    <item type="raw" name="f">r/c/f.psvg</item>
+    <item type="raw" name="g">r/c/g.psvg</item>
+    <item type="raw" name="h">r/c/h.psvg</item>
+    <item type="raw" name="i">r/c/i.psvg</item>
+    <item type="raw" name="j">r/c/j.psvg</item>
+    <item type="raw" name="k">r/c/k.psvg</item>
+    <item type="raw" name="l">r/c/l.psvg</item>
+    <item type="raw" name="m">r/c/m.psvg</item>
+    <item type="raw" name="n">r/c/n.psvg</item>
+    <item type="raw" name="o">r/c/o.psvg</item>
+    <item type="raw" name="p">r/c/p.psvg</item>
+    <item type="raw" name="q">r/c/q.psvg</item>
+    <item type="raw" name="r">r/c/r.psvg</item>
+    <item type="raw" name="s">r/c/s.psvg</item>
+    <item type="raw" name="t">r/c/t.psvg</item>
+    <item type="raw" name="u">r/c/u.psvg</item>
+    <item type="raw" name="v">r/c/v.psvg</item>
+    <item type="raw" name="w">r/c/w.psvg</item>
+    <item type="raw" name="x">r/c/x.psvg</item>
+    <item type="raw" name="y">r/c/y.psvg</item>
+    <item type="raw" name="z">r/c/z.psvg</item>
+    <item type="raw" name="a0">r/c/a0.mp3</item>
+    <item type="raw" name="a1">r/c/a1.mp3</item>
+    <item type="raw" name="a2">r/c/a2.mp3</item>
+    <item type="raw" name="a3">r/c/a3.mp3</item>
+    <item type="raw" name="wear">r/c/wear.apk</item>
+</resources>

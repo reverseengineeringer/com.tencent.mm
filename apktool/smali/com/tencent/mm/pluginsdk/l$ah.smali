@@ -1,0 +1,18 @@
+.class public final Lcom/tencent/mm/pluginsdk/l$ah;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/mm/pluginsdk/l;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "ah"
+.end annotation
+
+
+# static fields
+.field public static gKy:Lcom/tencent/mm/pluginsdk/l$o;

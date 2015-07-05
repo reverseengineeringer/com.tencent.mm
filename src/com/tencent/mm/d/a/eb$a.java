@@ -1,0 +1,17 @@
+package com.tencent.mm.d.a;
+
+import com.tencent.mm.storage.ar;
+
+public final class eb$a
+{
+  public int aAk = 0;
+  public boolean aAl = false;
+  public String amm;
+  public ar aub;
+}
+
+/* Location:
+ * Qualified Name:     com.tencent.mm.d.a.eb.a
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

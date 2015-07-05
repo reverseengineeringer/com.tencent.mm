@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cwu">Google Play ծառայությունների սխալ կա</string>
+    <string name="cwv">Ինչ-որ հավելված պահանջում է տեղադրել Google Play ծառայությունները:</string>
+    <string name="cww">Ինչ-որ հավելված պահանջում է թարմացնել Google Play ծառայությունները:</string>
+    <string name="cwx">Ինչ-որ հավելված պահանջում է միացնել Google Play ծառայությունները:</string>
+    <string name="cwy">%1$s-ի հարցմամբ</string>
+    <string name="cwz">Տեղադրեք Google Play ծառայությունները</string>
+    <string name="cx0">Այս հավելվածը չի գործարկվի առանց Google Play ծառայությունների, որոնք բացակայում են ձեր հեռախոսում:</string>
+    <string name="cx1">Այս հավելվածը չի գործարկվի առանց Google Play ծառայությունների, որոնք բացակայում են ձեր գրասալիկում:</string>
+    <string name="cx2">Տեղադրել Google Play ծառայությունները</string>
+    <string name="cx3">Միացնել Google Play ծառայությունները</string>
+    <string name="cx4">Այս ծրագիրը չի աշխատի, եթե դուք չմիացնեք Google Play ծառայությունները:</string>
+    <string name="cx5">Միացնել Google Play ծառայությունները</string>
+    <string name="cx6">Նորացրեք Google Play ծառայությունները</string>
+    <string name="cx7">Այս ծրագիրը չի գործարկվի, եթե դուք չնորացնեք Google Play ծառայությունները:</string>
+    <string name="cx8">Ցանցի սխալ կա</string>
+    <string name="cx9">Պահանջվում է տվյալների կապ` Google Play ծառայություններին միանալու համար:</string>
+    <string name="cx_">Հաշիվն անվավեր է</string>
+    <string name="cxa">Նշված հաշիվը գոյություն չունի այս սարքում: Ընտրեք այլ հաշիվ:</string>
+    <string name="cxb">Անհայտ խնդիր՝ Google Play ծառայություններում:</string>
+    <string name="cxc">Google Play ծառայություններ</string>
+    <string name="cxd">Google Play ծառայությունները, որոնց ապավինում են ձեր ծրագրերից որոշները, չեն աջակցվում ձեր սարքի կողմից: Խնդրում ենք կապվել արտադրողի հետ օգնության համար:</string>
+    <string name="cxe">Սարքի ամսաթիվը կարծես սխալ է: Ստուգեք սարքի ամսաթիվը:</string>
+    <string name="cxf">Նորացնել</string>
+    <string name="cxg">Մուտք գործել</string>
+    <string name="cxh">Մուտք գործեք Google-ով</string>
+</resources>

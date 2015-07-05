@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="d" parent="@android:style/Theme.Holo.Light.DarkActionBar" />
+    <style name="b1">
+        <item name="android:textSize">@dimen/j</item>
+        <item name="android:textColor">@color/an</item>
+        <item name="android:textColorHint">@color/au</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/cz</item>
+        <item name="android:paddingTop">@dimen/u</item>
+        <item name="android:paddingBottom">@dimen/u</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/c5</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+    <style name="cj" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">@dimen/k</item>
+        <item name="android:textColor">@color/an</item>
+        <item name="android:textColorHint">@color/at</item>
+        <item name="android:background">@drawable/cz</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/a4</item>
+        <item name="android:minHeight">32.0dip</item>
+        <item name="android:hint">@string/ba6</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+    <style name="eb" parent="@style/in">
+        <item name="android:buttonStyle">@android:style/Widget.Button</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:checkboxStyle">@style/bd</item>
+        <item name="android:listViewStyle">@style/ez</item>
+        <item name="android:progressBarStyleHorizontal">@style/e4</item>
+        <item name="android:radioButtonStyle">@style/be</item>
+        <item name="android:preferenceScreenStyle">@style/eq</item>
+        <item name="android:preferenceCategoryStyle">@style/et</item>
+        <item name="android:preferenceInformationStyle">@style/es</item>
+        <item name="android:preferenceStyle">@style/ep</item>
+        <item name="android:checkBoxPreferenceStyle">@style/eu</item>
+        <item name="android:yesNoPreferenceStyle">@style/ex</item>
+        <item name="android:dialogPreferenceStyle">@style/ey</item>
+        <item name="android:editTextPreferenceStyle">@style/ew</item>
+        <item name="android:ringtonePreferenceStyle">@style/ev</item>
+        <item name="android:preferenceLayoutChild">@style/er</item>
+        <item name="android:windowAnimationStyle">@style/ef</item>
+        <item name="android:actionBarStyle">@style/el</item>
+        <item name="android:homeAsUpIndicator">@color/a3</item>
+        <item name="android:editTextBackground">@drawable/cz</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:actionBarItemBackground">@drawable/v</item>
+        <item name="d8">@style/el</item>
+        <item name="dc">@drawable/v</item>
+        <item name="df">@color/a3</item>
+    </style>
+    <style name="ec" parent="@style/eb" />
+    <style name="ef" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/al</item>
+        <item name="android:activityOpenExitAnimation">@anim/i</item>
+        <item name="android:activityCloseEnterAnimation">@anim/i</item>
+        <item name="android:activityCloseExitAnimation">@anim/am</item>
+    </style>
+    <style name="eg" parent="@style/eb">
+        <item name="android:actionBarStyle">@style/em</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="d2">true</item>
+        <item name="d8">@style/em</item>
+    </style>
+    <style name="ej" parent="@style/ei">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="d1">false</item>
+        <item name="d2">false</item>
+    </style>
+    <style name="el" parent="@style/fh">
+        <item name="android:icon">@drawable/u</item>
+        <item name="android:background">@color/az</item>
+        <item name="android:titleTextStyle">@style/en</item>
+        <item name="android:subtitleTextStyle">@style/eo</item>
+        <item name="android:indeterminateProgressStyle">@style/aq</item>
+        <item name="android:backgroundStacked">@color/az</item>
+        <item name="android:backgroundSplit">@color/az</item>
+        <item name="e2">@style/en</item>
+        <item name="e3">@style/eo</item>
+        <item name="e4">@drawable/u</item>
+        <item name="e7">@color/az</item>
+        <item name="e8">@color/az</item>
+        <item name="e9">@color/az</item>
+        <item name="ec">@style/aq</item>
+    </style>
+    <style name="em" parent="@style/el">
+        <item name="android:background">@color/b0</item>
+        <item name="android:backgroundStacked">@color/b0</item>
+        <item name="android:backgroundSplit">@color/b0</item>
+        <item name="e7">@color/b0</item>
+        <item name="e8">@color/b0</item>
+        <item name="e9">@color/b0</item>
+    </style>
+    <style name="f6" parent="@style/eb">
+        <item name="android:windowBackground">@color/a_</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="f7" parent="@style/eb">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="d1">false</item>
+    </style>
+    <style name="h0" parent="@android:style/Widget.Holo.ActionBar" />
+    <style name="h1" parent="@android:style/Widget.Holo.Light.ActionBar" />
+    <style name="h2" parent="@android:style/Widget.Holo.ActionBar.Solid" />
+    <style name="h3" parent="@android:style/Widget.Holo.Light.ActionBar.Solid" />
+    <style name="h4" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" />
+    <style name="h5" parent="@android:style/Widget.Holo.ActionButton" />
+    <style name="h6" parent="@android:style/Widget.Holo.Light.ActionButton" />
+    <style name="h7" parent="@android:style/Widget.Holo.ActionButton.CloseMode" />
+    <style name="h8" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode" />
+    <style name="h9" parent="@android:style/Widget.Holo.ActionButton.Overflow" />
+    <style name="h_" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow" />
+    <style name="ha" parent="@android:style/Widget.Holo.ActionBar.TabBar" />
+    <style name="hb" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar" />
+    <style name="hc" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar.Inverse" />
+    <style name="hd" parent="@android:style/Widget.Holo.ActionBar.TabView" />
+    <style name="he" parent="@android:style/Widget.Holo.Light.ActionBar.TabView" />
+    <style name="hf" parent="@android:style/Widget.Holo.Light.ActionBar.TabView.Inverse" />
+    <style name="hg" parent="@android:style/Widget.Holo.ActionBar.TabText" />
+    <style name="hh" parent="@android:style/Widget.Holo.Light.ActionBar.TabText" />
+    <style name="hi" parent="@android:style/Widget.Holo.Light.ActionBar.TabText.Inverse" />
+    <style name="hk" parent="@android:style/Widget.Holo.Light.ActionMode.Inverse" />
+    <style name="hl" parent="@android:style/TextAppearance.Holo.Widget.ActionMode.Title" />
+    <style name="hm" parent="@android:style/TextAppearance.Holo.Widget.ActionMode.Subtitle" />
+    <style name="hn" parent="@android:style/TextAppearance.Holo.Widget.ActionMode.Title.Inverse" />
+    <style name="ho" parent="@android:style/TextAppearance.Holo.Widget.ActionMode.Subtitle.Inverse" />
+    <style name="hp" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Menu" />
+    <style name="hq" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" />
+    <style name="hr" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle" />
+    <style name="hs" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse" />
+    <style name="ht" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle.Inverse" />
+    <style name="hw" parent="@android:style/Widget.Holo.Spinner" />
+    <style name="hx" parent="@android:style/Widget.Holo.Light.Spinner" />
+    <style name="hy" parent="@android:style/Widget.Holo.DropDownItem.Spinner" />
+    <style name="hz" parent="@android:style/Widget.Holo.Light.DropDownItem.Spinner" />
+    <style name="i0" parent="@android:style/Widget.Holo.ListView.DropDown" />
+    <style name="i1" parent="@android:style/Widget.Holo.ListView.DropDown" />
+    <style name="i5" parent="@android:style/Widget.ListView.Menu" />
+    <style name="i6" parent="@android:style/Widget.Holo.PopupMenu" />
+    <style name="i7" parent="@android:style/Widget.Holo.Light.PopupMenu" />
+    <style name="i8" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Large" />
+    <style name="i9" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Small" />
+    <style name="i_" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Large" />
+    <style name="ia" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Small" />
+    <style name="ic" parent="@android:style/TextAppearance.Holo.SearchResult.Title" />
+    <style name="id" parent="@android:style/TextAppearance.Holo.SearchResult.Subtitle" />
+    <style name="if" parent="@android:style/TextAppearance.Holo.SearchResult.Title" />
+    <style name="ig" parent="@android:style/TextAppearance.Holo.SearchResult.Subtitle" />
+    <style name="is" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarWidgetTheme">?d_</item>
+        <item name="d1">?android:windowActionBar</item>
+        <item name="d_">@null</item>
+        <item name="da">?android:actionBarSize</item>
+        <item name="dc">?android:actionBarItemBackground</item>
+        <item name="di">?android:actionButtonStyle</item>
+        <item name="dl">?android:selectableItemBackground</item>
+        <item name="dm">?android:dividerVertical</item>
+        <item name="dn">?android:dividerHorizontal</item>
+        <item name="do">?android:listPreferredItemHeight</item>
+        <item name="dp">?android:listPreferredItemHeightSmall</item>
+        <item name="dq">?android:listPreferredItemHeightLarge</item>
+        <item name="dr">?android:listPreferredItemPaddingLeft</item>
+        <item name="ds">?android:listPreferredItemPaddingRight</item>
+    </style>
+    <style name="it" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarWidgetTheme">?d_</item>
+        <item name="d1">?android:windowActionBar</item>
+        <item name="d_">@null</item>
+        <item name="da">?android:actionBarSize</item>
+        <item name="dc">?android:actionBarItemBackground</item>
+        <item name="di">?android:actionButtonStyle</item>
+        <item name="dl">?android:selectableItemBackground</item>
+        <item name="dm">?android:dividerVertical</item>
+        <item name="dn">?android:dividerHorizontal</item>
+        <item name="do">?android:listPreferredItemHeight</item>
+        <item name="dp">?android:listPreferredItemHeightSmall</item>
+        <item name="dq">?android:listPreferredItemHeightLarge</item>
+        <item name="dr">?android:listPreferredItemPaddingLeft</item>
+        <item name="ds">?android:listPreferredItemPaddingRight</item>
+    </style>
+    <style name="iu" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarWidgetTheme">?d_</item>
+        <item name="d1">?android:windowActionBar</item>
+        <item name="d_">@style/il</item>
+        <item name="da">?android:actionBarSize</item>
+        <item name="dc">?android:actionBarItemBackground</item>
+        <item name="di">?android:actionButtonStyle</item>
+        <item name="dl">?android:selectableItemBackground</item>
+        <item name="dm">?android:dividerVertical</item>
+        <item name="dn">?android:dividerHorizontal</item>
+        <item name="do">?android:listPreferredItemHeight</item>
+        <item name="dp">?android:listPreferredItemHeightSmall</item>
+        <item name="dq">?android:listPreferredItemHeightLarge</item>
+        <item name="dr">?android:listPreferredItemPaddingLeft</item>
+        <item name="ds">?android:listPreferredItemPaddingRight</item>
+    </style>
+    <style name="pp" parent="@style/el">
+        <item name="d7">@style/fw</item>
+        <item name="di">@style/fs</item>
+        <item name="dy">?da</item>
+        <item name="e0">bo|bp|br</item>
+        <item name="e2">@style/fm</item>
+        <item name="e3">@style/fn</item>
+        <item name="e6">?dm</item>
+        <item name="eb">@style/fq</item>
+        <item name="ec">@style/fr</item>
+    </style>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cwu">Chyba služieb Google Play</string>
+    <string name="cwv">Aplikácia vyžaduje inštaláciu služieb Google Play.</string>
+    <string name="cww">Aplikácia vyžaduje aktualizáciu služieb Google Play.</string>
+    <string name="cwx">Aplikácia vyžaduje povolenie služieb Google Play.</string>
+    <string name="cwy">Vyžiadané aplikáciou %1$s</string>
+    <string name="cwz">Inštalovať služby Google Play</string>
+    <string name="cx0">Na spustenie tejto aplikácie sa vyžadujú služby Google Play, ktoré v telefóne nemáte.</string>
+    <string name="cx1">Na spustenie tejto aplikácie sa vyžadujú služby Google Play, ktoré v tablete nemáte.</string>
+    <string name="cx2">Inštalovať služby Google Play</string>
+    <string name="cx3">Povoliť služby Google Play</string>
+    <string name="cx4">Táto aplikácia bude fungovať až po povolení služieb Google Play.</string>
+    <string name="cx5">Povoliť služby Google Play</string>
+    <string name="cx6">Aktualizovať služby Google Play</string>
+    <string name="cx7">Túto aplikáciu bude možné spustiť až po aktualizácii služieb Google Play.</string>
+    <string name="cx8">Chyba siete</string>
+    <string name="cx9">Pripojenie k službám Google Play si vyžaduje dátové pripojenie.</string>
+    <string name="cx_">Neplatný účet</string>
+    <string name="cxa">Zadaný účet v tomto zariadení neexistuje. Vyberte iný účet.</string>
+    <string name="cxb">Neznámy problém so službami Google Play.</string>
+    <string name="cxc">Služby Google Play</string>
+    <string name="cxd">Niektoré vaše aplikácie vyžadujú služby Google Play, ktoré vo vašom zariadení nie sú podporované. Ak potrebujete pomoc, kontaktujte výrobcu.</string>
+    <string name="cxe">Dátum nastavený v zariadení sa zdá byť nesprávny. Skontrolujte ho.</string>
+    <string name="cxf">Aktualizovať</string>
+    <string name="cxg">Prihlásiť sa</string>
+    <string name="cxh">Prihlásiť sa do účtu Google</string>
+</resources>

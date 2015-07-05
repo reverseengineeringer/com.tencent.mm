@@ -1,0 +1,2 @@
+secondary-2.dex.jar 8bcbc284abaf77c044d5f2c30dac262b secondary.dex02.Canary
+secondary-1.dex.jar 591e6b292246ce8030ea13a66602ce8d secondary.dex01.Canary
